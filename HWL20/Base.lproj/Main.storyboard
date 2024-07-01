@@ -20,31 +20,67 @@
                                 <rect key="frame" x="100" y="159" width="193" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="QU8-c8-wIl"/>
+                                </connections>
                             </textField>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="YYy-Jk-NHg">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1000" translatesAutoresizingMaskIntoConstraints="NO" id="YYy-Jk-NHg">
                                 <rect key="frame" x="98" y="243" width="197" height="31"/>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eta-Rw-lPX">
-                                <rect key="frame" x="159" y="323" width="75" height="35"/>
+                                <rect key="frame" x="169.33333333333334" y="323" width="54.666666666666657" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="pause.rectangle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="pauseButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WPV-z6-opu"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FK6-al-iAf">
+                                <rect key="frame" x="100" y="218" width="193" height="4"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2EP-Xq-dxX">
+                                <rect key="frame" x="253.99999999999997" y="323" width="46.666666666666657" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="stop.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="stopButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MB0-hF-Shk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jwx-Wt-Rlb">
+                                <rect key="frame" x="95.333333333333329" y="323" width="43.999999999999986" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="play.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="playButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XlU-FQ-CPj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YYy-Jk-NHg" secondAttribute="trailing" constant="100" id="31l-K5-qbK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FK6-al-iAf" secondAttribute="trailing" constant="100" id="D3E-jc-m5G"/>
                             <constraint firstItem="YYy-Jk-NHg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="DSr-AX-nkX"/>
                             <constraint firstItem="eta-Rw-lPX" firstAttribute="top" secondItem="YYy-Jk-NHg" secondAttribute="bottom" constant="50" id="IuL-k2-NW1"/>
                             <constraint firstItem="YYy-Jk-NHg" firstAttribute="top" secondItem="SuB-nD-Q6P" secondAttribute="bottom" constant="50" id="Z3e-w2-48H"/>
                             <constraint firstItem="SuB-nD-Q6P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="aqb-ar-GJr"/>
+                            <constraint firstItem="2EP-Xq-dxX" firstAttribute="leading" secondItem="eta-Rw-lPX" secondAttribute="trailing" constant="30" id="dB9-ep-Uxw"/>
+                            <constraint firstItem="FK6-al-iAf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="dQa-E9-MWn"/>
+                            <constraint firstItem="Jwx-Wt-Rlb" firstAttribute="top" secondItem="YYy-Jk-NHg" secondAttribute="bottom" constant="50" id="dp1-Tc-XiD"/>
                             <constraint firstItem="SuB-nD-Q6P" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="frK-Sr-wk5"/>
+                            <constraint firstItem="FK6-al-iAf" firstAttribute="top" secondItem="SuB-nD-Q6P" secondAttribute="bottom" constant="25" id="gG1-O5-EB0"/>
+                            <constraint firstItem="2EP-Xq-dxX" firstAttribute="top" secondItem="YYy-Jk-NHg" secondAttribute="bottom" constant="50" id="gtT-CW-vx1"/>
+                            <constraint firstItem="eta-Rw-lPX" firstAttribute="leading" secondItem="Jwx-Wt-Rlb" secondAttribute="trailing" constant="30" id="jeV-z2-pE9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SuB-nD-Q6P" secondAttribute="trailing" constant="100" id="kRO-k3-BpQ"/>
                             <constraint firstItem="eta-Rw-lPX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nvx-nT-RYE"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="pauseButton" destination="eta-Rw-lPX" id="lvt-x3-pfd"/>
+                        <outlet property="playButton" destination="Jwx-Wt-Rlb" id="Kk4-1x-n9u"/>
+                        <outlet property="progressView" destination="FK6-al-iAf" id="oGC-2p-m2S"/>
                         <outlet property="slider" destination="YYy-Jk-NHg" id="mfo-5a-pJx"/>
+                        <outlet property="stopButton" destination="2EP-Xq-dxX" id="BrE-B1-1lx"/>
                         <outlet property="textField" destination="SuB-nD-Q6P" id="lk2-lM-HxI"/>
                     </connections>
                 </viewController>
@@ -54,6 +90,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="pause.rectangle.fill" catalog="system" width="128" height="93"/>
+        <image name="play.fill" catalog="system" width="117" height="128"/>
+        <image name="stop.fill" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
